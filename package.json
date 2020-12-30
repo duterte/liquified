@@ -1,0 +1,25 @@
+{
+    "name": "liquified",
+    "displayName": "liquified",
+    "description": "Syntax higlighting for shopify liquid files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "liquified",
+            "aliases": ["liquid", "liquified"],
+            "extensions": [".liquid"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "liquified",
+            "scopeName": "source.liquid",
+            "path": "./syntaxes/liquified.tmLanguage.json"
+        }]
+    }
+}
