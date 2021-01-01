@@ -1,25 +1,57 @@
 {
-    "name": "liquified",
-    "displayName": "liquified",
-    "description": "Syntax higlighting for shopify liquid files",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.52.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "liquified",
+  "displayName": "liquified",
+  "description": "Syntax higlighting/Snippets for shopify liquid files",
+  "version": "1.0.0",
+  "publisher": "German Ochea",
+  "keyword": [
+    "shopify",
+    "liquid"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duterte/liquified"
+  },
+  "icon": "liquified_icon.png",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "liquified",
+        "path": "./snippets/liquid.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "liquified",
-            "aliases": ["liquid", "liquified"],
-            "extensions": [".liquid"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "liquified",
-            "scopeName": "source.liquid",
-            "path": "./syntaxes/liquified.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "liquified",
+        "scopeName": "source.liquid",
+        "path": "./syntaxes2/liquified.tmLanguage.json",
+        "injectTo": [
+          "source.liquid"
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "id": "liquified",
+        "aliases": [
+          "liquid",
+          "liquified"
+        ],
+        "extensions": [
+          ".liquid"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^3.14.1"
+  }
 }
